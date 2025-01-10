@@ -3,23 +3,23 @@
 //------------------------------
 
 // Let the Machine decide a hand
-function randomHand(){
+function RandomHand(){
     let pcHand = Math.floor((Math.random()*3))
     return pcHand
 }
 // Ask the User for their hand
-function askUser(){
-    let userHand = prompt("Rock Paper Scissor?");
+function AskUser(){
+    let userHand = prompt("Rock Paper Scissors?");
     switch(userHand){
         case "Rock": return 0;
         case "Paper": return 1;
-        case "Scissor": return 2;
-        default: console.log("Wrong input!"); askUser();
+        case "Scissors": return 2;
+        default: console.log("Wrong input!"); AskUser();
     }
     return userHand;
 }
 // Check who won
-function checkVictory(pcHand,userHand){
+function CheckVictory(pcHand,userHand){
     if(pcHand==userHand){
         console.log("Tie!")
     }
@@ -32,8 +32,8 @@ function checkVictory(pcHand,userHand){
 }
 
 // Initiate the game
-function playRPS(){
-    let pc = randomHand();
-    let user = askUser();
-    checkVictory(pc,user);
+function PlayRPS(){
+    let pc = RandomHand();
+    let user = AskUser();
+    CheckVictory(pc,user);
 }
