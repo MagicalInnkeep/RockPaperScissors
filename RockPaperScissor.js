@@ -88,7 +88,7 @@ function domManipulation(){
     btnScissors.textContent = "Scissors";
     btnScissors.setAttribute("id","s");
     container.appendChild(btnScissors);
-
+    
     const gameStatus = document.createElement("p");
     gameStatus.style.whiteSpace="pre";
     gameStatus.setAttribute("id","gameStatus");
